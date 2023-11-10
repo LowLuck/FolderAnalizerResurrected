@@ -1,7 +1,7 @@
 ﻿using Scripting;
 using System.Security;
 
-namespace FolerAnalizerResurrected
+namespace FolderAnalizerResurrected
 {
     public static class DirectoryDataProvider
     {

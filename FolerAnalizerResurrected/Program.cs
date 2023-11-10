@@ -1,5 +1,4 @@
-﻿using FolerAnalizerResurrected;
-using FolerAnalizerResurrected.UI;
+﻿using FolderAnalizerResurrected;
 
 namespace FolderAnalizerResurrected
 {
@@ -12,13 +11,10 @@ namespace FolderAnalizerResurrected
         // Search hidden directoris (for example %appdata%
         static void Main(string[] args)
         {
+            Console.WriteLine("Type /ext to leave");
             Console.WriteLine("Enter directory path");
-            string? path = Console.ReadLine();
-            if (Directory.Exists(path))
-            {
-                DirectoryModel dirModel = new DirectoryModel(path);
-                UI.PrintDirectoryList(dirModel);
-            }
+
+            UI.ReadInput();
         }
     }
 }

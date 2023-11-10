@@ -1,4 +1,4 @@
-﻿namespace FolerAnalizerResurrected
+﻿namespace FolderAnalizerResurrected
 {
     public class DirectoryModel : FileModel
     {

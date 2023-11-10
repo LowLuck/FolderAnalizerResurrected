@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace FolerAnalizerResurrected
+﻿namespace FolderAnalizerResurrected
 {
     public class FileModel
     {
