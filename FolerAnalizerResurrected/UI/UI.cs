@@ -9,7 +9,7 @@
 
             int indent = 2;
             char indentSymbol = '-';
-            foreach (FileModel file in directoryModel.Contents)
+            foreach (FileModel file in directoryModel.Contents.OrderBy(x => -x.Size))
             {
                 convertedSize = ConvertByteToUserFriendly(DirectoryDataProvider.GetFileSize(file.Path));
                 message += $"\n{new string(indentSymbol, indent)}{file.GetName()} {convertedSize[0]} {convertedSize[1]}";
