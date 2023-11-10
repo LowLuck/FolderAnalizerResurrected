@@ -9,10 +9,13 @@
 
             int indent = 2;
             char indentSymbol = '-';
+
+            int totalStringSize = directoryModel.Contents.Max(x => x.GetName().Length) + 2;
             foreach (FileModel file in directoryModel.Contents.OrderBy(x => -x.Size))
             {
+                string fileName = file.GetName();
                 convertedSize = ConvertByteToUserFriendly(DirectoryDataProvider.GetFileSize(file.Path));
-                message += $"\n{new string(indentSymbol, indent)}{file.GetName()} {convertedSize[0]} {convertedSize[1]}";
+                message += $"\n{new string(indentSymbol, indent)}{fileName}{new string(' ', totalStringSize - fileName.Length)}{convertedSize[0]} {convertedSize[1]}";
             }
 
             Console.WriteLine(message);
